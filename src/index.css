@@ -1,0 +1,75 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-dark: #080B10;
+    --panel-dark: #111720;
+    --panel-secondary: #19212C;
+    --racing-orange: #FF5A1F;
+    --racing-orange-glow: rgba(255, 90, 31, 0.35);
+    --safe-green: #36D982;
+    --warning-amber: #FFB020;
+    --danger-red: #FF3B45;
+  }
+
+  body {
+    background-color: var(--bg-dark);
+    color: #F5F7FA;
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    overscroll-behavior-y: none;
+  }
+}
+
+.font-racing {
+  font-family: 'Barlow Condensed', -apple-system, BlinkMacSystemFont, sans-serif;
+  letter-spacing: 0.03em;
+}
+
+.font-telemetry {
+  font-family: 'JetBrains Mono', monospace;
+  font-variant-numeric: tabular-nums;
+}
+
+/* Subtle Motorsport Carbon Fiber Pattern */
+.bg-carbon {
+  background-color: #111720;
+  background-image: 
+    linear-gradient(45deg, #0e141c 25%, transparent 25%), 
+    linear-gradient(-45deg, #0e141c 25%, transparent 25%), 
+    linear-gradient(45deg, transparent 75%, #0e141c 75%), 
+    linear-gradient(-45deg, transparent 75%, #0e141c 75%);
+  background-size: 8px 8px;
+  background-position: 0 0, 0 4px, 4px -4px, -4px 0px;
+}
+
+.bg-grid-tech {
+  background-size: 24px 24px;
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+}
+
+/* Touch Control optimizations - Prevent zoom, text selection, callouts */
+.touch-control {
+  touch-action: manipulation;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+/* Custom Scrollbars */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+::-webkit-scrollbar-track {
+  background: #0b0f16;
+}
+::-webkit-scrollbar-thumb {
+  background: #232c3a;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #FF5A1F;
+}
